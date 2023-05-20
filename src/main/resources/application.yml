@@ -1,0 +1,23 @@
+server:
+  port: 9191
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/keycloakdemo?createDatabaseIfNotExist=true
+    username: root
+    password: 112296root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+keycloak:
+  realm: keycloakdemo
+  auth-server-url: http://localhost:8080
+  resource: admin-employee
+  public-client: true
+  bearer-only: true
+
